@@ -14,11 +14,13 @@ class SimpleDemoPage extends StatefulWidget {
 class _SimpleDemoPageState extends State<SimpleDemoPage> {
   @override
   Widget build(BuildContext context) {
-    var args = ModalRoute.of(context).settings.arguments;
+    Map args = ModalRoute.of(context).settings.arguments;
+    var title = args["title"];
+    var color = args["color"];
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: color,
       appBar: AppBar(
-        title: Text(args),
+        title: Text(title),
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
