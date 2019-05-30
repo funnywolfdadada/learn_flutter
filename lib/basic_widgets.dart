@@ -17,15 +17,17 @@ class _BasicWidgetsPageState extends State<BasicWidgetsPage> {
     return Scaffold(
       backgroundColor: color,
       appBar: AppBar(title: Text(title),),
-      body: Column(
-        children: <Widget>[
-          _CountWidget(),
-          _TextWidget(),
-          _ButtonWidgets(),
-          _ImageWidgets(),
-          _CheckBoxWidgets(),
-          _InputWidgets(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            _CountWidget(),
+            _TextWidget(),
+            _ButtonWidgets(),
+            _ImageWidgets(),
+            _CheckBoxWidgets(),
+            _InputWidgets(),
+          ],
+        ),
       ),
     );
   }
