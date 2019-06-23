@@ -14,6 +14,8 @@ class LayoutWidgetsPage extends StatelessWidget {
           children: <Widget>[
             _LinearLayoutWidgets(),
             _FlexLayoutWidgets(),
+            _WrapWidgets(),
+            _StackWidgets(),
           ],
         ),
       ),
@@ -122,7 +124,65 @@ class _WrapWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Column(
-        
+        children: <Widget>[
+          Wrap(
+            spacing: 8.0,
+            runSpacing: 4.0,
+            alignment: WrapAlignment.center,
+            children: <Widget>[
+              Chip(
+                avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('A')),
+                label: Text('Hamilton'),
+              ),
+              Chip(
+                avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('M')),
+                label: Text('Lafayette'),
+              ),
+              Chip(
+                avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('H')),
+                label: Text('Mulligan'),
+              ),
+              Chip(
+                avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('J')),
+                label: Text('Laurens'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _StackWidgets extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          Container(
+            width: 1000,
+            height: 100,
+            color: Colors.red,
+          ),
+          Positioned(
+            left: 10,
+            child: Text("left: 10"),
+          ),
+          Positioned(
+            top: 10,
+            child: Text("top: 10"),
+          ),
+          Positioned(
+            right: 10,
+            child: Text("right: 10"),
+          ),
+          Positioned(
+            bottom: 10,
+            child: Text("bottom: 10"),
+          ),
+        ],
       ),
     );
   }

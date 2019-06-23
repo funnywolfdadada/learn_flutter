@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learn_flutter/simple_demo.dart';
 
 import 'basic_widgets.dart';
+import 'container_widgets.dart';
 import 'layout_widgets.dart';
 
 void main() => runApp(MyApp());
@@ -34,6 +35,7 @@ final routeMap = {
   "simple_demo": (context) => SimpleDemoPage(),
   "basic_widgets": (context) => BasicWidgetsPage(),
   "layout_widgets": (context) => LayoutWidgetsPage(),
+  "container_widgets": (context) => ContainerWidgetsPage(),
 };
 
 final routeMapKey = routeMap.keys.toList();
@@ -43,7 +45,7 @@ class HomePage extends StatelessWidget {
     _PageEntryItem("Simple Demo", "A simple demo page contains ListView", routeMapKey[0], color: Colors.blue),
     _PageEntryItem("Basic Widgets", "Introduces basic widgets", routeMapKey[1], color: Colors.green),
     _PageEntryItem("Layout Widgets", "Layout widgets test", routeMapKey[2], color: Colors.grey),
-    _PageEntryItem("111", "222", "333", color: Colors.yellow),
+    _PageEntryItem("Container Widgets", "Container Widgets", routeMapKey[3], color: Colors.yellow),
     _PageEntryItem("111", "222", "333", color: Colors.pink),
     _PageEntryItem("111", "222", "333", color: Colors.purple),
     _PageEntryItem("111", "222", "333"),
