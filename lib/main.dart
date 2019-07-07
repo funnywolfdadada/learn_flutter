@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/scroll_widgets.dart';
 import 'package:learn_flutter/simple_demo.dart';
 
 import 'basic_widgets.dart';
@@ -36,6 +37,7 @@ final routeMap = {
   "basic_widgets": (context) => BasicWidgetsPage(),
   "layout_widgets": (context) => LayoutWidgetsPage(),
   "container_widgets": (context) => ContainerWidgetsPage(),
+  "scroll_widgets": (context) => ScrollWidgetsPage(),
 };
 
 final routeMapKey = routeMap.keys.toList();
@@ -46,7 +48,7 @@ class HomePage extends StatelessWidget {
     _PageEntryItem("Basic Widgets", "Introduces basic widgets", routeMapKey[1], color: Colors.green),
     _PageEntryItem("Layout Widgets", "Layout widgets test", routeMapKey[2], color: Colors.grey),
     _PageEntryItem("Container Widgets", "Container Widgets", routeMapKey[3], color: Colors.yellow),
-    _PageEntryItem("111", "222", "333", color: Colors.pink),
+    _PageEntryItem("Scroll Widgets", "Scroll Widgets", routeMapKey[4], color: Colors.pink),
     _PageEntryItem("111", "222", "333", color: Colors.purple),
     _PageEntryItem("111", "222", "333"),
     _PageEntryItem("111", "222", "333"),
