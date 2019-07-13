@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/scroll_widgets.dart';
 import 'package:learn_flutter/simple_demo.dart';
+import 'package:learn_flutter/touch_event_widgets.dart';
 
 import 'basic_widgets.dart';
 import 'container_widgets.dart';
@@ -40,6 +41,7 @@ final routeMap = {
   "container_widgets": (context) => ContainerWidgetsPage(),
   "scroll_widgets": (context) => ScrollWidgetsPage(),
   "functional_widgets": (context) => FunctionalWidgets(),
+  "touch_event_widgets": (context) => TouchEventWidgets(),
 };
 
 final routeMapKey = routeMap.keys.toList();
@@ -52,7 +54,7 @@ class HomePage extends StatelessWidget {
     _PageEntryItem("Container Widgets", "Container Widgets", routeMapKey[3], color: Colors.yellow),
     _PageEntryItem("Scroll Widgets", "Scroll Widgets", routeMapKey[4], color: Colors.pink),
     _PageEntryItem("Functional Widgets", "Functional Widgets", routeMapKey[5], color: Colors.purple),
-    _PageEntryItem("111", "222", "333"),
+    _PageEntryItem("Touch Event Widgets", "Touch Event Widgets", routeMapKey[6]),
     _PageEntryItem("111", "222", "333"),
   ];
 
