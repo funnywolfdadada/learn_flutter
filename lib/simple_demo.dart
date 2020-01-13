@@ -22,15 +22,46 @@ class _SimpleDemoPageState extends State<SimpleDemoPage> {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return _getCardWithIndex(index);
-        },
-        itemCount: 22,
-      ),
+      body: getListView(22),
     );
   }
 
+}
+
+class ListViewTestWidget extends StatefulWidget {
+  final int _count;
+
+  ListViewTestWidget(this._count);
+
+  @override
+  State<StatefulWidget> createState() {
+    return ListViewTestWidgetState(_count);
+  }
+
+}
+
+class ListViewTestWidgetState extends State<ListViewTestWidget> with AutomaticKeepAliveClientMixin {
+  final int _count;
+
+  ListViewTestWidgetState(this._count);
+
+  @override
+  Widget build(BuildContext context) {
+    return getListView(_count);
+  }
+
+  @override
+  bool get wantKeepAlive => true;
+
+}
+
+ListView getListView(int count) {
+  return ListView.builder(
+    itemBuilder: (context, index) {
+      return _getCardWithIndex(index);
+    },
+    itemCount: count,
+  );
 }
 
 _getCardWithIndex(int index) {
